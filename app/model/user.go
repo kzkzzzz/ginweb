@@ -1,7 +1,7 @@
 package model
 
 type UserSearch struct {
-	Id int `form:"id" binding:"min=0"`
+	Id int `form:"id" binding:"min=1,required"`
 }
 
 type User struct {

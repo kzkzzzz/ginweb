@@ -12,7 +12,7 @@ var (
 )
 
 func init() {
-	registerDefault()
+	registerGin()
 }
 
 func registerGin() {

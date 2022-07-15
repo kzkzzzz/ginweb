@@ -8,14 +8,11 @@ import (
 )
 
 var (
-	cf  *conf.Config
-	svc *service.Service
-
+	svc    *service.Service
 	engine *gin.Engine
 )
 
 func NewHttp(c *conf.Config, s *service.Service) (h *http.Server) {
-	cf = c
 	svc = s
 	h = &http.Server{
 		Addr: c.Server.Addr,
