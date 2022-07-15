@@ -1,0 +1,21 @@
+# 服务配置
+Server:
+  Addr: ":9900" # http监听地址
+# 数据源
+Data:
+  Mysql:
+    Dsn: temp:temp666@tcp(127.0.0.1:3306)/site?loc=Local&charset=utf8mb4&writeTimeout=3s&readTimeout=3s&timeout=2s&parseTime=true
+    MaxConn: 16 # 连接池最大连接数
+    MaxIdleConn: 4 # 连接池最小连接数
+    MaxLifetime: 1800 # 连接池内连接有效时间,单位秒
+    Debug: true
+
+  Redis:
+    Addr: 127.0.0.1:6379
+    Password: ""
+    DB: 15
+
+# 日志
+Log:
+  Color: true
+  Level: DEBUG
