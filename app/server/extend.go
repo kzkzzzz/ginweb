@@ -17,7 +17,7 @@ type (
 	handler func(ctx *gin.Context) (result any, err error)
 )
 
-func WrapHandler(h handler) gin.HandlerFunc {
+func ApiWrap(h handler) gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		data, err := h(ctx)
 		if err != nil {

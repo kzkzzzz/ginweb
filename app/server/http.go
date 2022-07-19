@@ -25,5 +25,5 @@ func NewHttp(c *conf.Config, s *service.Service) (h *http.Server) {
 }
 
 func router() {
-	engine.GET("/", WrapHandler(index))
+	engine.GET("/", ApiWrap(index))
 }
